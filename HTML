@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PROJEKT JS5-toggle</title>
+		<script
+			src="https://kit.fontawesome.com/810f4138f7.js"
+			crossorigin="anonymous"
+		></script>
+		<link
+			rel="stylesheet"
+			href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@tabler/icons@latest/iconfont/tabler-icons.min.css"
+		/>
+		<link rel="stylesheet" href="./CSS/style.css" />
+	</head>
+	<body>
+
+		<div class="wrapper">
+			<div class="top">
+				<h1>BILLSPLITTER</h1>
+				<p class="describe">podziel się rachunkiem ze znajomymi</p>
+			</div>
+			<div class="bottom">
+				<label for="price" class="cash">Kwota do zapłaty:</label>
+				<input type="number" class="cash-input">
+				
+				<label for="" class="number-folks">Liczba osób:</label>
+				<input type="number" class="people-input">
+				
+				<label for="" class="number-tip">Napiwek</label>
+				<select id="tip">
+					<option value="0" disabled selected>-Wybierz napiwek-</option>
+					<option value="0.05">5%</option>
+					<option value="0.1">10%</option>
+					<option value="0.15">15%</option>
+					<option value="0.2">20%</option>
+				</select>
+
+				<button class="count-btn">Oblicz</button>
+				<button class="delete-btn">Usuń</button>
+				<p class="error"></p>
+				<p class="info">Musicie się złożyć po: <span class="info-price"></span>zł</p>
+			</div>
+		</div>
+		<script src="./js/main.js"></script>
+
+	</body>
