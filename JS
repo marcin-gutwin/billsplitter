@@ -1,0 +1,43 @@
+const cashInput = document.querySelector('.cash-input')
+const peopleInput = document.querySelector('.people-input')
+const tipInput = document.querySelector('#tip')
+const countBtn = document.querySelector('.count-btn')
+const errorAlert = document.querySelector('.error')
+const info = document.querySelector('.info')
+const costSum = document.querySelector('.info-price')
+const deleteBtn = document.querySelector('.delete-btn')
+
+const countPrice = () => {
+
+    if(cashInput.value == '' || peopleInput.value == '' || tipInput.value == ''){
+        errorAlert.textContent = 'Proszę uzupełnij wszystke pola!';
+        costSum.textContent = ''
+    } else{
+        doCount()
+        errorAlert.textContent = '';
+
+    }
+    
+}
+
+
+const doCount = () => {
+    
+    const amountCash = parseInt(cashInput.value) ;
+    const amountPeople = parseInt(peopleInput.value);
+    const amountTip = parseFloat(tipInput.value);
+
+    const sumOut = (amountCash+(amountCash*amountTip))/amountPeople;
+
+    costSum.textContent = sumOut.toFixed(2)
+}
+
+
+const deleteStuff = () => {     
+    cashInput.value = ''
+    peopleInput.value = ''
+    costSum.textContent = ''
+}
+
+countBtn.addEventListener('click',countPrice)
+deleteBtn.addEventListener('click',deleteStuff)
